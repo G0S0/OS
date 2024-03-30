@@ -1,0 +1,22 @@
+class Main
+{
+    function void main()
+    {
+        do Memory.poke(8000, 333);
+        do Memory.poke(8001, 334);
+        do Memory.poke(8002, 335);
+        do Memory.poke(8003, 336);
+        do Memory.memcpy(8000, 3000, 4);
+
+        do Memory.alloc(100);
+        do Memory.alloc(75);
+        do Memory.alloc(30);
+        do Memory.deAlloc(16384 - 99);
+        do Memory.alloc(45);
+        do Memory.deAlloc(16384 - 202);
+        
+        //do Memory.defrag();
+
+        return;
+    }
+}
