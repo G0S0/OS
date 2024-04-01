@@ -11,11 +11,9 @@ class Main
         do Memory.alloc(100);
         do Memory.alloc(75);
         do Memory.alloc(30);
-        do Memory.deAlloc(16384 - 99);
         do Memory.alloc(45);
-        do Memory.deAlloc(16384 - 202);
         
-        //do Memory.defrag();
+        do Memory.defrag();
 
         return;
     }
