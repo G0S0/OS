@@ -120,14 +120,20 @@ class Memory {
 
     function void defrag(){
         var int size, i, curr, temp, offset;
-        let i = freeList;
+        let i = freeList + 2;
         while(i < 16384){
             if((~(ram[i] = null))){
+                do Output.printString("i: ");
+                do Output.printInt(i);
+                do Output.println();
                 let temp = i + ram[i + 1] + 2;
                 if(ram[i] = temp){
                     let ram[i] = ram[temp];
                     let ram[i + 1] = ram[i+1] + ram[i + size + 3];
                     do Memory.memcpy(i + ram[i + 1] + 4, i + ram[i + 1] + 2, ram[i + 1] + 3);  
+                    do Output.printString("i: ");
+                    do Output.printInt(i);
+                    do Output.println();
                 }
                 let i = ram[i];
             }

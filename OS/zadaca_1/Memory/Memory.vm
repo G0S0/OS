@@ -201,6 +201,8 @@ push constant 0
 return
 function Memory.defrag 5
 push static 2
+push constant 2
+add
 pop local 1
 label WHILE_EXP0
 push local 1
@@ -219,6 +221,21 @@ not
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
+push constant 3
+call String.new 1
+push constant 105
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push local 1
+call Output.printInt 1
+pop temp 0
+call Output.println 0
+pop temp 0
 push local 1
 push local 1
 push constant 1
@@ -311,6 +328,21 @@ push that 0
 push constant 3
 add
 call Memory.memcpy 3
+pop temp 0
+push constant 3
+call String.new 1
+push constant 105
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push local 1
+call Output.printInt 1
+pop temp 0
+call Output.println 0
 pop temp 0
 label IF_FALSE1
 push local 1

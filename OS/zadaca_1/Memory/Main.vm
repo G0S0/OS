@@ -32,7 +32,5 @@ pop temp 0
 push constant 45
 call Memory.alloc 1
 pop temp 0
-call Memory.defrag 0
-pop temp 0
 push constant 0
 return
